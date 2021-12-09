@@ -26,8 +26,6 @@ def producer():
         
 
 
-
-
 def consumer():
     next_out = 0
     while(1):
@@ -49,30 +47,9 @@ def consumer():
             
 
 
-class myThread (threading.Thread):
-    def __init__(self, threadID, name):
-        threading.Thread.__init__(self)
-        self.__flag = threading.Event()
-        self.__flag.set()
-        self.threadID = threadID
-        self.name = name
-
-    def run(self):
-        print("Starting " + self.name)
-        if (self.threadID == 1):
-            producer()
-        else:
-            consumer()
-        print("Exiting " + self.name)
-
-    def pause(self):
-        self.__flag.clear()
-    def resume(self):
-        self.__flag.set()
-
 try:
-   thread1 = myThread(1, "Producer")
-   thread2 = myThread(2, "Consumer")
+   thread1 = threading.Thread(target = producer)
+   thread2 = threading.Thread(target = consumer)
    thread1.start()
    thread2.start()
 except:
