@@ -1,5 +1,6 @@
 # CS4310_proj7
-
+Main is the initial problem that produces race conditions
+Branch is a solution implemented with Semaphores
 
 [Video Link](https://youtu.be/TKF38EWrCsw)
 
