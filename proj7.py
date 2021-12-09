@@ -2,16 +2,17 @@ import threading
 import time
 import random
 
+
 n = 100
 buffer = [0 for x in range(n)]
-
-
 race_condition = "Race Condition Occurred"
+
+
+
 def producer():
     next_in = 0
     while(1):
         k1 = random.randint(1,99)
-        
         print("k1: " + str(k1))
         for j in range(k1):
             buffer[(next_in + j) % n] += 1
