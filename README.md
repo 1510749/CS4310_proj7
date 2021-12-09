@@ -1,6 +1,6 @@
 # CS4310_proj7
 Main is the initial problem that produces race conditions
-Branch is a solution implemented with Semaphores
+<br>Branch is a solution implemented with Semaphores
 
 [Video Link](https://youtu.be/TKF38EWrCsw)
 
@@ -14,4 +14,4 @@ As said in the video the n = 100 and the k & t values follow the project descrip
 Let me know if you have any issues with any part of my submission.
 
 Screencast Software: Open Broadcast Software (OBS)
-Version: 26.0.2
+<br>Version: 26.0.2
